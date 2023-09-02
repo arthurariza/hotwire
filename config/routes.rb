@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resources :tic_tac_toes, only: %i[new create]
 
-  # Defines the root path route ("/")
   root 'home#index'
 end
