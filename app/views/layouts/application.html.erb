@@ -9,6 +9,7 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= render "shared/dark_mode_check" %>
   </head>
 
   <body>
@@ -23,7 +24,7 @@
 
       <div class="flex space-x-1">
         <div data-controller="dark-mode">
-          <%= image_tag("icons/icon-light.svg", class: 'w-6 h-6 fill-yellow-500 hover:cursor-pointer', data: { action: 'click->dark-mode#toggle'}) %>
+          <%= image_tag("icons/light-bulb.svg", class: 'w-6 h-6 hover:cursor-pointer', data: { action: 'click->dark-mode#toggle'}) %>
         </div>
         <a href="#">Log In</a>
       </div>
