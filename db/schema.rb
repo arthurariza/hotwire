@@ -12,7 +12,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 0) do
+ActiveRecord::Schema[7.0].define(version: 20_230_902_200_627) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
+
+  create_table 'players', force: :cascade do |t|
+    t.string 'name'
+    t.string 'character'
+    t.bigint 'tic_tac_toe_id', null: false
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['tic_tac_toe_id'], name: 'index_players_on_tic_tac_toe_id'
+  end
+
+  create_table 'tic_tac_toes', force: :cascade do |t|
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+  end
+
+  add_foreign_key 'players', 'tic_tac_toes', column: 'tic_tac_toe_id'
 end
