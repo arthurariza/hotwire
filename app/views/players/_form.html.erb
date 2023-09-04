@@ -1,0 +1,4 @@
+<%= form_with model: player, url: tic_tac_toe_players_path(player.tic_tac_toe) do |form| %>
+  <%= form.text_field :name, class: 'bg-color text-color block' %>
+  <%= form.submit :Continue, class: 'text-color bg-color mt-2 p-4 hover:underline hover:cursor-pointer' %>
+<% end %>
