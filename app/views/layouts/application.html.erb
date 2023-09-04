@@ -13,13 +13,12 @@
   </head>
 
   <body>
-    <header class="bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 p-4 flex items-center justify-around">
-      <h1 class="text-slate-900 dark:text-white font-bold text-4xl">Hotwire</h1>
+    <header class="bg-white dark:bg-slate-800 text-color p-4 flex items-center justify-around">
+      <h1 class="header-text-color font-bold text-4xl">Hotwire</h1>
 
       <nav class="space-x-1">
-        <a href="#">Home</a>
-        <a href="#">Contact</a>
-        <a href="#">Details</a>
+        <%= link_to 'Home', root_path %>
+        <%= link_to 'TicTacToe', new_tic_tac_to_path %>
       </nav>
 
       <div class="flex space-x-1">
